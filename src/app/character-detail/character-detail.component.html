@@ -1,0 +1,45 @@
+<div class="main_detail_wrapper">
+  <div class="api_card_detail">
+    <div class="api_card_header">
+      <h1>{{ character.name }}</h1>
+      <div class="buttons_detail_wrapper">
+        <button mat-flat-button color="primary" (click)="handleShowInfo()">
+          show all details
+        </button>
+        <button
+          class="show_detail_button"
+          mat-fab
+          matTooltip="Accent"
+          color="accent"
+          aria-label="Button go back"
+          (click)="handleGoBack()"
+        >
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </div>
+    </div>
+    @if( showInformation){
+    <div class="api_card_body">
+      <mat-tab-group>
+        <mat-tab label="Character Image">
+          <img src="{{ character.image }}" alt="{{ character.name }}" />
+        </mat-tab>
+        <mat-tab label="Information">
+          <ul class="character_description_list">
+            <li>
+              <strong>Status: </strong><span>{{ character.status }}</span>
+            </li>
+            <li>
+              <strong>Gender: </strong><span>{{ character.gender }}</span>
+            </li>
+            <li>
+              <strong>Location: </strong
+              ><span>{{ character.location.name }}</span>
+            </li>
+          </ul>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.card-title {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(2, 82, 55);
+  text-decoration: none;
+}
+
+.image_container {
+  border-radius: 100%;
+}
+
+ .character_card {
+  max-width: 350px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.3s;
+}
+
+.character_card:hover {
+  transform: translateY(-15px);
+}
